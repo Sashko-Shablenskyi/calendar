@@ -24,19 +24,9 @@ $fontSize: rem(12); // де 14(px) - розмір шрифту за замовч
 
 // Основні кольори
 $mainColor: #383838; // Колір шрифту за замовчуванням
-$borderColor: #d2d2d2;
-$hoverColor: #adadad;
-$prevNextDaysBgColor: #fafafa;
-$prevNextDaysTextColor: #38383840;
-
-$accentColorOne: #800080;
-$accentColorTwo: #ff6347;
-$accentColorThree: #008000;
-$accentColorFour: #ffa500;
-$accentColorFive: #eeaacc;
 
 // Палітра кольорів
-// @import "base/colors-palette";
+@import 'base/colors-palette';
 
 // Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
 
