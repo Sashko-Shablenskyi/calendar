@@ -1,14 +1,16 @@
+import { getFirstDayInMonth } from './getFirstDayInMonth.js';
+import { getNumbDaysInMonth } from './getNumbDaysInMonth.js';
+
 const monthWrapper = document.querySelector('.month__days');
 
-export function renderDaysOfMonth(
-  daysOfThePrevMonth,
-  daysOfTheNextMonth,
-  lastDayOfCurrentMonth,
-  lastDayOfPrevMonth,
-  day
-) {
-  monthWrapper.innerHTML = '';
+const lastDayOfCurrentMonth = getNumbDaysInMonth(year, month);
+const lastDayOfPrevMonth = getNumbDaysInMonth(year, month - 1);
+const firstDayOfWeek = getFirstDayInMonth(year, month);
 
+const daysOfThePrevMonth = lastDayOfPrevMonth - firstDayOfWeek + 1;
+const daysOfTheNextMonth = 7 * 6 - lastDayOfCurrentMonth - firstDayOfWeek;
+
+export function renderDaysOfMonths(year, month, day) {
   for (let i = daysOfThePrevMonth; i <= lastDayOfPrevMonth; i++) {
     monthWrapper.innerHTML += `
       <li class="month__day month__prew">

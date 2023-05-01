@@ -6,17 +6,38 @@
     min-height: rem(140);
 
     .current {
+      user-select: none;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: rem(15);
       height: 100%;
       flex: 1;
       font-size: rem(32);
       line-height: calc(39 / 32);
-
+      width: 90%;
+      div {
+        text-align: center;
+      }
       &__month,
       &__year {
         cursor: pointer;
+      }
+
+      &__arrow--left,
+      &__arrow--right {
+        border-bottom: rem(4) var(--border-color) solid;
+        border-right: rem(4) var(--border-color) solid;
+        width: rem(25);
+        height: rem(25);
+        cursor: pointer;
+      }
+
+      &__arrow--left {
+        transform: rotate(135deg);
+      }
+      &__arrow--right {
+        transform: rotate(-45deg);
       }
     }
   }
