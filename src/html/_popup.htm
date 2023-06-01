@@ -1,10 +1,15 @@
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
-</div>
+<dialog class="popup">
+  <button class="popup__close" type="submit" formmethod="dialog"></button>
+  <div class="popup__title">Add task</div>
+  <form method="dialog" class="popup__form">
+    <textarea class="popup__textarea" name="" id=""></textarea>
+    <select class="popup__select" name="" id="">
+      <option value="task--color-one">Purple</option>
+      <option value="task--color-two" selected>Orange</option>
+      <option value="task--color-three" selected>Green</option>
+      <option value="task--color-four" selected>Yellow</option>
+      <option value="task--color-five" selected>Pink</option>
+    </select>
+    <button class="popup__btn" type="submit">Save</button>
+  </form>
+</dialog>

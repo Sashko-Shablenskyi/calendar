@@ -10,7 +10,7 @@ export function getDate(dayOffset = 0, monthOffset = 0, yearOffset = 0) {
     month = date.getMonth() + monthOffset,
     day = date.getDate() + dayOffset;
 
-  let lastDayOfCurrentMonth = getNumbDaysInMonth(year, month),
+  const lastDayOfCurrentMonth = getNumbDaysInMonth(year, month),
     lastDayOfPrevMonth = getNumbDaysInMonth(year, month - 1),
     firstDayOfWeek = getFirstDayInMonth(year, month),
     daysOfThePrevMonth = lastDayOfPrevMonth - firstDayOfWeek + 1,
@@ -23,6 +23,8 @@ export function getDate(dayOffset = 0, monthOffset = 0, yearOffset = 0) {
     daysOfTheNextMonth,
     lastDayOfCurrentMonth,
     lastDayOfPrevMonth,
-    day
+    day,
+    month,
+    year
   );
 }
