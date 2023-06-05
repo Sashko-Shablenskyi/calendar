@@ -16,43 +16,49 @@ export function renderDaysOfMonth(
 
   for (let i = daysOfThePrevMonth; i <= lastDayOfPrevMonth; i++) {
     monthWrapper.innerHTML += `
-      <li class="month__day month__prew" data-date='${i}-${month}-${year}'>
+      <div class="month__day month__prew" data-date='${i}-${month}-${year}'>
         <div class="data">${i}</div>
-        <div class="tasks"></div>
-      </li>
+        <ul class="tasks"></ul>
+        <div class="extra">+ <span></span></div>
+      </div>
     `;
   }
 
   for (let i = 0; i < lastDayOfCurrentMonth; i++) {
     if (i == day - 1 && month == currMonth && year == currYEar) {
       monthWrapper.innerHTML += `
-        <li class="month__day month__curr"  data-date='${i + 1}-${
+        <div class="month__day month__curr"  data-date='${i + 1}-${
         month + 1
       }-${year}'>
           <div class="data data--curr"><span>${i + 1}</span></div>
-          <div class="tasks"></div>
-        </li>
+          <ul class="tasks"></ul>
+        <div class="extra">+ <span></span></div>
+
+        </div>
       `;
     } else {
       monthWrapper.innerHTML += `
-        <li class="month__day month__curr"  data-date='${i + 1}-${
+        <div class="month__day month__curr"  data-date='${i + 1}-${
         month + 1
       }-${year}'>
           <div class="data">${i + 1}</div>
-          <div class="tasks"></div>
-        </li>
+          <ul class="tasks"></ul>
+        <div class="extra">+ <span></span></div>
+
+        </div>
       `;
     }
   }
 
   for (let i = 0; i < daysOfTheNextMonth; i++) {
     monthWrapper.innerHTML += `
-      <li class="month__day month__next"  data-date='${i + 1}-${
+      <div class="month__day month__next"  data-date='${i + 1}-${
       month + 2
     }-${year}'>
         <div class="data">${i + 1}</div>
-        <div class="tasks"></div>
-      </li>
+        <ul class="tasks"></ul>
+        <div class="extra">+ <span></span></div>
+      </div>
     `;
   }
 }

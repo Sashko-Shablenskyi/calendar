@@ -2,13 +2,21 @@
   &:modal {
     background-color: #fff;
     width: 35vw;
-    min-height: 25vh;
     max-height: 90vh;
     padding: rem(25);
     border-radius: rem(10);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media (max-width: $mobile) {
+      width: 90vw;
+      top: 30%;
+    }
+
+    @media (max-width: $tablet) {
+      width: 70vw;
+    }
   }
 
   &::backdrop {
@@ -25,6 +33,7 @@
     grid-area: 1/1/2/3;
     resize: vertical;
     max-height: rem(350);
+    min-height: rem(25);
   }
 
   &__textarea,
