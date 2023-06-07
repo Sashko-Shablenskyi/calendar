@@ -1,9 +1,9 @@
 import { checkHeight } from './checkHeight.js';
 
 export function renderTask(choicedDayData) {
-  const popup = document.querySelector('.popup'),
-    addTaskInput = popup.querySelector('.popup__textarea'),
-    taskColor = popup.querySelector('.popup__select');
+  const popup = document.querySelector('.add-task'),
+    addTaskInput = popup.querySelector('.add-task__textarea'),
+    taskColor = popup.querySelector('.add-task__select');
 
   const task = addTaskInput.value,
     choicedTaskColor = taskColor.value;

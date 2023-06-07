@@ -1,5 +1,6 @@
 .popup {
   &:modal {
+    position: relative;
     background-color: #fff;
     width: 35vw;
     max-height: 90vh;
@@ -22,34 +23,22 @@
   &::backdrop {
     background: rgba(0, 0, 0, 0.6);
   }
-  &__form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: rem(20);
-    margin: rem(25) 0 0;
-  }
 
-  &__textarea {
-    grid-area: 1/1/2/3;
-    resize: vertical;
-    max-height: rem(350);
-    min-height: rem(25);
-  }
-
-  &__textarea,
-  &__btn {
-    padding: rem(5) rem(15);
-    border-bottom: rem(1) solid var(--border-color);
+  &__header {
+    position: fixed;
+    top: rem(25);
+    left: rem(25);
+    right: rem(25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__close {
+    position: relative;
     cursor: pointer;
     width: rem(15);
     height: rem(15);
-    position: absolute;
-    top: rem(15);
-    right: rem(15);
-
     &:before,
     &:after {
       content: '';
@@ -71,5 +60,42 @@
 
   &__title {
     font-size: rem(20);
+  }
+}
+
+.add-task {
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(20);
+    margin: rem(50) 0 0;
+  }
+
+  &__textarea {
+    grid-area: 1/1/2/3;
+    resize: vertical;
+    max-height: rem(350);
+    min-height: rem(25);
+  }
+
+  &__textarea,
+  &__btn {
+    padding: rem(10) rem(15);
+    border-bottom: rem(1) solid var(--border-color);
+  }
+}
+
+.all-tasks {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    margin: rem(50) 0 0;
+    font-size: rem(18);
+    .task {
+      padding: rem(15);
+      white-space: unset !important;
+      text-overflow: unset !important;
+    }
   }
 }

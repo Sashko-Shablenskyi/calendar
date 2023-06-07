@@ -11,9 +11,11 @@ export function hideExtraTasks(choicedDay) {
 
   if (visibleTasksCount >= 1) {
     tasks.forEach((task, index) => {
-      index >= visibleTasksCount
-        ? task.classList.add('task--hidden')
-        : task.classList.remove('task--hidden');
+      if (index >= visibleTasksCount) {
+        task.classList.add('task--hidden');
+      } else {
+        task.classList.remove('task--hidden');
+      }
     });
 
     const extraTasksCount = tasks.length - visibleTasksCount;

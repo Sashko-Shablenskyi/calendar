@@ -1,15 +1,27 @@
-<dialog class="popup">
-  <button class="popup__close" type="submit" formmethod="dialog"></button>
-  <div class="popup__title">Add task</div>
-  <form method="dialog" class="popup__form">
-    <textarea class="popup__textarea" name="" id="" autofocus></textarea>
-    <select class="popup__select" name="" id="">
+<dialog class="add-task popup">
+  <div class="popup__header">
+    <div class="popup__title">All tasks</div>
+    <button class="popup__close" type="submit" formmethod="dialog"></button>
+  </div>
+
+  <form method="dialog" class="add-task__form">
+    <textarea class="add-task__textarea" name="" id="" autofocus></textarea>
+    <select class="add-task__select" name="" id="">
       <option value="task--color-one" selected>Purple</option>
       <option value="task--color-two">Orange</option>
       <option value="task--color-three">Green</option>
       <option value="task--color-four">Yellow</option>
       <option value="task--color-five">Pink</option>
     </select>
-    <button class="popup__btn" type="submit">Save</button>
+    <button class="add-task__btn" type="submit">Save</button>
   </form>
+</dialog>
+
+<dialog class="all-tasks popup">
+  <div class="popup__header">
+    <div class="popup__title">All tasks</div>
+    <button class="popup__close" type="submit" formmethod="dialog"></button>
+  </div>
+
+  <ul class="all-tasks__list"> </ul>
 </dialog>
